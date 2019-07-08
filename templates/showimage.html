@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+<link th:href="@{/js/bootstrap-fileinput-master/css/fileinput.min.css}" rel="stylesheet"/>
+<link th:href="@{/js/bootstrap-fileinput-master/themes/explorer/theme.css}" rel="stylesheet"/>
+<link th:href="@{/js/bootstrap-fileinput-master/css/fileinput-rtl.min.css}" rel="stylesheet"/>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script th:src="@{/js/bootstrap-fileinput-master/js/fileinput.min.js}"></script>
+<script th:src="@{/js/bootstrap-fileinput-master/themes/explorer/theme.js}"></script>
+<script th:src="@{/js/bootstrap-fileinput-master/js/locales/zh.js}"></script>
+</head>
+<body>
+{% block content %}
+<img src="/evidences/{{ files[1] }}"/>
+<script type="text/javascript">
+    var id = 0;
+    var array = [1,2,3];
+    for(var i in  array){
+        var filehere = {{ files[i] }};
+        document.write("{{ files }}");
+        {#document.write("<img src=\"/evidences/{{/>\n");#}
+    }
+</script>
+{% endblock %}
+</body>
+</html>
